@@ -158,5 +158,11 @@ Calculates the perimeter of a triangle using formula: P = a + b + c
 
 ## Last commit hash
 ```bash
-git rev-parse HEAD
+git log -n 145d97f15e921159fa2f6a2ddd5c09c0d93a2c12a
+
+commit 45d97f15e921159fa2f6a2ddd5c09c0d93a2c12a (HEAD -> deadline_0, origin/dedline_0, main)
+Author: lixelv <simeongfremenko@gmail.com>
+Date:   Thu Oct 2 16:22:51 2025 +0300
+
+    Added documentation
 ```
