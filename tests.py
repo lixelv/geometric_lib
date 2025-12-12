@@ -1,8 +1,5 @@
 import unittest
 
-import numpy as np
-import numpy.testing as npt
-
 import circle as c
 import rectangle as r
 import square as s
