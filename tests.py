@@ -39,19 +39,13 @@ class CircleTest(unittest.TestCase):
         for radius, expected_area, _ in circle_test_cases:
             result = c.area(radius)
 
-            if isinstance(result, np.ndarray):
-                npt.assert_allclose(result, expected_area)
-            else:
-                self.assertEqual(result, expected_area)
+            self.assertEqual(result, expected_area)
 
     def test_perimeter(self):
         for radius, _, expected_perimeter in circle_test_cases:
             result = c.perimeter(radius)
 
-            if isinstance(result, np.ndarray):
-                npt.assert_allclose(result, expected_perimeter)
-            else:
-                self.assertEqual(result, expected_perimeter)
+            self.assertEqual(result, expected_perimeter)
 
 
 class RectangleTest(unittest.TestCase):
@@ -59,19 +53,13 @@ class RectangleTest(unittest.TestCase):
         for sides, expected_area, _ in rectangle_test_cases:
             result = r.area(*sides)
 
-            if isinstance(result, np.ndarray):
-                npt.assert_allclose(result, expected_area)
-            else:
-                self.assertEqual(result, expected_area)
+            self.assertEqual(result, expected_area)
 
     def test_perimeter(self):
         for sides, _, expected_perimeter in rectangle_test_cases:
             result = r.perimeter(*sides)
 
-            if isinstance(result, np.ndarray):
-                npt.assert_allclose(result, expected_perimeter)
-            else:
-                self.assertEqual(result, expected_perimeter)
+            self.assertEqual(result, expected_perimeter)
 
 
 class SquareTest(unittest.TestCase):
@@ -79,19 +67,13 @@ class SquareTest(unittest.TestCase):
         for side, expected_area, _ in square_test_cases:
             result = s.area(side)
 
-            if isinstance(result, np.ndarray):
-                npt.assert_allclose(result, expected_area)
-            else:
-                self.assertEqual(result, expected_area)
+            self.assertEqual(result, expected_area)
 
     def test_perimeter(self):
         for side, _, expected_perimeter in square_test_cases:
             result = s.perimeter(side)
 
-            if isinstance(result, np.ndarray):
-                npt.assert_allclose(result, expected_perimeter)
-            else:
-                self.assertEqual(result, expected_perimeter)
+            self.assertEqual(result, expected_perimeter)
 
 
 class TriangleTest(unittest.TestCase):
@@ -99,16 +81,10 @@ class TriangleTest(unittest.TestCase):
         for side_and_h, expected_area, _ in triangle_test_cases:
             result = t.area(side_and_h[0], side_and_h[1])
 
-            if isinstance(result, np.ndarray):
-                npt.assert_allclose(result, expected_area)
-            else:
-                self.assertEqual(result, expected_area)
+            self.assertEqual(result, expected_area)
 
     def test_perimeter(self):
         for sides, _, expected_perimeter in triangle_test_cases:
             result = t.perimeter(*sides)
 
-            if isinstance(result, np.ndarray):
-                npt.assert_allclose(result, expected_perimeter)
-            else:
-                self.assertEqual(result, expected_perimeter)
+            self.assertEqual(result, expected_perimeter)
